@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1234ball"]
+
+[ext_resource type="Script" uid="uid://c7axco2cd5vrw" path="res://scripts/Ball.gd" id="1_ball"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1"]
+
+[node name="Ball" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 11
+script = ExtResource("1_ball")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(1, 1, 1, 1)
+polygon = PackedVector2Array(10, 0, 8.66, 5, 5, 8.66, 0, 10, -5, 8.66, -8.66, 5, -10, 0, -8.66, -5, -5, -8.66, 0, -10, 5, -8.66, 8.66, -5)
